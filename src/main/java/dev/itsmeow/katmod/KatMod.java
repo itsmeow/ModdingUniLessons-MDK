@@ -1,6 +1,8 @@
 package dev.itsmeow.katmod;
 
 import com.mojang.logging.LogUtils;
+import dev.itsmeow.katmod.init.ModBlocks;
+import dev.itsmeow.katmod.init.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -28,17 +30,19 @@ public class KatMod
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::buildContents);
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        //LOGGER.info("HELLO FROM COMMON SETUP");
     }
 
     private void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.EXPLODING_STICK.get());
+            event.accept(ModItems.CANNON.get());
         }
     }
 
