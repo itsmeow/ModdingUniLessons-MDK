@@ -2,6 +2,7 @@ package dev.itsmeow.katmod;
 
 import com.mojang.logging.LogUtils;
 import dev.itsmeow.katmod.init.ModBlocks;
+import dev.itsmeow.katmod.init.ModEntities;
 import dev.itsmeow.katmod.init.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -31,6 +32,7 @@ public class KatMod
         modEventBus.addListener(this::buildContents);
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModEntities.ENTITIES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
