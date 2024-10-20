@@ -4,6 +4,7 @@ import dev.itsmeow.katmod.KatMod;
 import dev.itsmeow.katmod.items.ExplodingStickItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -20,4 +21,9 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> CANNON = ITEMS.registerSimpleBlockItem(ModBlocks.CANNON);
 
+    // Spawn Eggs
+
+    public static final DeferredItem<DeferredSpawnEggItem> LIZARD_SPAWN_EGG = ITEMS.register("lizard_spawn_egg", () -> new DeferredSpawnEggItem(
+            ModEntities.LIZARD::get, 0x117029, 0x0c2105, new Item.Properties()
+    ));
 }

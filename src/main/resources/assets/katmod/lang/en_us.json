@@ -1,4 +1,6 @@
 {
   "item.katmod.exploding_stick": "Exploding Stick",
-  "block.katmod.cannon": "Cannon"
+  "block.katmod.cannon": "Cannon",
+  "entity.katmod.lizard": "Lizard",
+  "item.katmod.lizard_spawn_egg": "Lizard Spawn Egg"
 }

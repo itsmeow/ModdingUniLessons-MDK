@@ -46,6 +46,9 @@ public class KatMod
             event.accept(ModItems.EXPLODING_STICK.get());
             event.accept(ModItems.CANNON.get());
         }
+        if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+            event.accept(ModItems.LIZARD_SPAWN_EGG.get());
+        }
     }
 
 }
